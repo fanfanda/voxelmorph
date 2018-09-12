@@ -37,7 +37,7 @@ atlas = np.load('../data/atlas_norm.npz')
 atlas_vol = atlas['vol']
 atlas_vol = np.reshape(atlas_vol, (1,) + atlas_vol.shape+(1,))
 
-def train(model,save_name, gpu_id, lr, n_iterations, reg_param, model_save_iter):
+def train(model, save_name, gpu_id, lr, n_iterations, reg_param, model_save_iter):
 
     model_dir = '../models/' + save_name
     if not os.path.isdir(model_dir):
