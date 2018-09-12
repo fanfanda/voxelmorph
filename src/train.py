@@ -18,12 +18,11 @@ from keras.optimizers import Adam
 from keras.models import load_model, Model
 
 # project imports
-sys.path.append('../ext/medipy-lib')
+# sys.path.append('../ext/medipy-lib')
 import medipy
 import datagenerators
 import networks
 import losses
-
 
 vol_size = (160, 192, 224)
 base_data_dir = '/insert/your/path/here'
