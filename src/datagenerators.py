@@ -16,9 +16,10 @@ def load_example_by_name(vol_name, seg_name):
     return tuple(return_vals)
 
 
-def example_gen(vol_names, return_segs=False, seg_dir=None):
+def example_gen(vol_names, return_segs = False, seg_dir = None):
     #idx = 0
     while(True):
+        print(len(vol_names))
         idx = np.random.randint(len(vol_names))
         X = np.load(vol_names[idx])['vol_data']
         X = np.reshape(X, (1,) + X.shape + (1,))
